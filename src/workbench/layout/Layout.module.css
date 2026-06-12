@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slot {
+  height: 100%;
+  transition: width 0.2s ease, min-width 0.2s ease;
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.center {
+  flex: 1;
+  background-color: #ffffff;
+  min-width: 0;
+  overflow: auto;
+}
+
+.right {
+  background-color: #f5f5f5;
+  border-left: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.hidden {
+  width: 0 !important;
+  min-width: 0 !important;
+  border: none;
+}
+
+.sash {
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+  z-index: 10;
+}
+
+.sash:hover,
+.sash:active {
+  background: #007acc;
+}

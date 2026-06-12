@@ -1,0 +1,21 @@
+# 可执行文件和编译输出
+*.exe
+*.dll
+*.so
+release/
+dist/
+build/
+out/
+
+# 依赖
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db

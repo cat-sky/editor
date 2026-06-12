@@ -1,0 +1,153 @@
+/* 触发按钮（常驻） */
+.triggerOverlay {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 400px;
+  max-width: 80vw;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #888;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.trigger:hover {
+  background: #ffffff;
+  border-color: #d0d0d0;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.triggerIcon {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.triggerText {
+  flex: 1;
+}
+
+/* 激活面板 */
+.overlay {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 560px;
+  max-width: 90vw;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  animation: promptSlideIn 0.15s ease-out;
+}
+
+@keyframes promptSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  color: #333;
+  background: #fff;
+  font-family: inherit;
+  line-height: 1.5;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: #007acc;
+}
+
+/* 命令列表 */
+.commandList {
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 4px;
+}
+
+.commandItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  transition: background 0.1s ease;
+}
+
+.commandItem:hover,
+.commandSelected {
+  background: #e8f4fc;
+}
+
+.commandTitle {
+  flex: 1;
+}
+
+.commandCategory {
+  font-size: 11px;
+  color: #888;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.commandEmpty {
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+/* 输入错误 */
+.error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #d73a49;
+  line-height: 1.4;
+}
